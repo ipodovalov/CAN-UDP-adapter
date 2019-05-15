@@ -2,7 +2,7 @@
 # Cборка программ для платы МПМ
 COUNT_STR_ERR=0
 
-. ../../../overlay/etc/sysconfig/functions
+. ../../functions
 
 if [ $# -lt 1 ]
 then
