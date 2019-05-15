@@ -11,11 +11,6 @@
 class EthernetDeviceDriver
 {
 public:
-    //! Структура с описанием формата запроса данных от МСУ (содержит текущее состояние GPS и топливных датчиков)
-    typedef struct __attribute__ ((__packed__)) {
-		uint8_t one_byte_zerkalo[40];
-    } msu_device_request_data_t;
-
     EthernetDeviceDriver(uint16_t port1, uint16_t port2);
 
     ~EthernetDeviceDriver();
@@ -25,11 +20,11 @@ public:
      * \param CANData текущие данные для отправки
      * \return код ошибки
      */
-    ERROR_CODE sendData(const usta_diagnostic_data_t &CANData);
+    ERROR_CODE sendData(const can_data_t &CANData);
 
     /*!
-     * \brief Считать ответ от Мастера
-     * \param responsе массив байт, содержащий ответ.
+     * \brief Слушаем порт UDP
+     * \param responsе массив байт, содержащий полученные по сети данные.
      * \return код ошибки
      */
     ERROR_CODE getData(byte_array &response, uint32_t read_timeout);

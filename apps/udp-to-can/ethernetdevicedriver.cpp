@@ -1,4 +1,4 @@
-#include "msudevicedriver.h"
+#include "ethernetdevicedriver.h"
 
 #include <iostream>
 #include <cassert>
