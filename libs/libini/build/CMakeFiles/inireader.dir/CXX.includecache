@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/sdk/mpm_soft/libs/libini/ini.h
+stdio.h
+-
+
+/home/user/sdk/mpm_soft/libs/libini/inireader.cpp
+algorithm
+-
+cctype
+-
+cstdlib
+-
+ini.h
+/home/user/sdk/mpm_soft/libs/libini/ini.h
+inireader.h
+/home/user/sdk/mpm_soft/libs/libini/inireader.h
+
+/home/user/sdk/mpm_soft/libs/libini/inireader.h
+map
+-
+string
+-
+cstdint
+-
+

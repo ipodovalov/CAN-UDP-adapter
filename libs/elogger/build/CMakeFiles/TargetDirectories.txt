@@ -1,0 +1,3 @@
+/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles/rebuild_cache.dir
+/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles/edit_cache.dir
+/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles/elogger.dir

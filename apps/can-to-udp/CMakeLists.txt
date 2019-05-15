@@ -1,4 +1,4 @@
-project(can_udp_adapter)
+project(can_to_udp)
 cmake_minimum_required(VERSION 2.8)
 
 if(UNIX)
@@ -6,13 +6,13 @@ if(UNIX)
 endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../common/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/include)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/elogger)
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/elogger/build)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libs/elogger)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../libs/elogger/build)
 
 aux_source_directory(. SRC_LIST)
-#list (APPEND SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/../../common/src/embtime.c")
+list (APPEND SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/../common/src/embtime.c")
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 
