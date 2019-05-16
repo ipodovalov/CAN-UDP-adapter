@@ -27,26 +27,28 @@ EthernetDeviceDriver::~EthernetDeviceDriver() {
 ERROR_CODE EthernetDeviceDriver::getData(byte_array &UDPDataPort1, byte_array &UDPDataPort2)
 {
 	char temp[BUF_SIZE];
-	long ret;
+	long ret1, ret2;
 	
-	ret = UDPSocket1->receive(temp, BUF_SIZE);
-	if(ret >= 0) {
-	    for (size_t i = 0; i < ret; i++){
+	ret1 = UDPSocket1->receive(temp, BUF_SIZE);
+	if(ret1 > 0) {
+	    for (size_t i = 0; i < ret1; i++){
             UDPDataPort1.push_back(temp[i]);
 		}
 	}
-	
-	ret = UDPSocket2->receive(temp, BUF_SIZE);
-	if(ret >= 0) {
-	    for (size_t i = 0; i < ret; i++){
+
+	ret2 = UDPSocket2->receive(temp, BUF_SIZE);
+	if(ret2 > 0) {
+	    for (size_t i = 0; i < ret2; i++){
             UDPDataPort2.push_back(temp[i]);
 		}
 	}
 	
-    return E_OK;
+	if(ret1>0 && ret2>0)
+		return E_OK;
+	return E_READ_ERROR;
 }
 
-ERROR_CODE EthernetDeviceDriver::sendData(const can_data_t &CANData) {
+ERROR_CODE EthernetDeviceDriver::sendData(const can_data_t CANData) {
     byte_array packet;      // Байтовый буфер данных для отправки в сеть
     
     ssize_t bytesWritten;
@@ -60,8 +62,6 @@ ERROR_CODE EthernetDeviceDriver::sendData(const can_data_t &CANData) {
     bytesWritten = UDPSocket1->send((char*)packet.c_str(), packet.size());
     bytesWritten = UDPSocket2->send((char*)packet.c_str(), packet.size());
 	
-	ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Отправлен пакет (" << packet.size() << " байт ):" << packet;
-
     if ((bytesWritten >= 0) && (bytesWritten == packet.size())) {
         return E_OK;
     } else {

@@ -54,8 +54,10 @@ typedef struct __attribute__ ((__packed__)) {
 
 typedef struct __attribute__ ((__packed__)) {
     embtime_t   time_stamp;
-	uint8_t datagram[BUF_SIZE] ;		    // свежий UDP-пакет
-	uint16_t    zer_size;
+	uint8_t     datagram_port1[BUF_SIZE] ;  // свежий UDP-пакет (1 порт)
+	uint16_t    datagram_size_port1 ;		// размер принятых данных
+	uint8_t     datagram_port2[BUF_SIZE] ;  // свежий UDP-пакет (2 порт)
+	uint16_t    datagram_size_port2 ;		// размер принятых данных
 } udp_data_t;
 
 #endif // TYPEDEFS_H

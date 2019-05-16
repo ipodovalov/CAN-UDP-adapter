@@ -29,6 +29,9 @@ public:
     //! Прервать цикл
     void stop() { isRunning = false; }
 
+protected:
+	void constructUDPdataStructure(udp_data_t &UDPstateRecord, const byte_array &UDPDataPort1, const byte_array &UDPDataPort2) ;
+
 private:
     //! Указатель на экземпляр класса-драйвера МСУ
     EthernetDeviceDriver *device;

@@ -20,7 +20,7 @@ public:
      * \param CANData текущие данные для отправки
      * \return код ошибки
      */
-    ERROR_CODE sendData(const can_data_t &CANData);
+    ERROR_CODE sendData(const can_data_t CANData);
 
     /*!
      * \brief Слушаем порт UDP
