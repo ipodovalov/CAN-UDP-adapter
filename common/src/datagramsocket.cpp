@@ -17,6 +17,12 @@ DatagramSocket::DatagramSocket(int port, char* address, bool broadcast, bool reu
     outaddr.sin_addr.s_addr = inet_addr(address);
     outaddr.sin_port = htons(port);
 
+	// так как сокет блокирующий, установлю таймаут на чтение
+    struct timeval tv;
+	tv.tv_sec = 5;
+	tv.tv_usec = 0;
+	setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+
     int OptVal = 1;
 
     if (broadcast)
