@@ -29,13 +29,11 @@ public:
      * \return код ошибки
      */
     ERROR_CODE getData(byte_array &UDPDataPort1, byte_array &UDPDataPort2);
-
-protected:
-   
+  
 private:
     //! Указатель на экземпляр класса для работы с Ethernet
     DatagramSocket *UDPSocket1;
     DatagramSocket *UDPSocket2;
 };
 
-#endif // MSUDEVICEDRIVER_H
+#endif // ETHERNETDEVICEDRIVER_H

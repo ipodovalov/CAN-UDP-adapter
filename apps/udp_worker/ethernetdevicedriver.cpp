@@ -56,7 +56,8 @@ ERROR_CODE EthernetDeviceDriver::sendData(const can_data_t CANData) {
     // Добавление данных тела пакета в буфер для отправки
     packet.append(reinterpret_cast<const uint8_t *>(&CANData), sizeof(CANData));
 
-	// Тут определяем в какой порт отправлять данные
+	//! TODO написать блок, где разбираем полученные по CAN данные
+	//! и определяем в какой порт отправлять данные по UDP
 
     // Отправка сформированного буфера в нужный UDP порт 
     bytesWritten = UDPSocket1->send((char*)packet.c_str(), packet.size());

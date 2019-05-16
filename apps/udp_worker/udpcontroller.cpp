@@ -26,6 +26,7 @@ UDPController::~UDPController() {
     isRunning = false;
 }
 
+//! Основной цикл программы
 void UDPController::start(int timeout) {
   uint8_t res;
   can_data_t CANstateRecord;
@@ -66,15 +67,15 @@ void UDPController::start(int timeout) {
       ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по сети данные 1 порт (" << UDPDataPort1.size() << "байт ):" << UDPDataPort1 ;
       ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по сети данные 2 порт (" << UDPDataPort2.size() << "байт ):" << UDPDataPort2 ;
       
-      // TODO сформировать из полученного набора байт структуру
-      // udp_data_t для помещения в разделяемую память
+      // Формируем структуру udp_data_t
       constructUDPdataStructure(UDPstateRecord, UDPDataPort1, UDPDataPort2) ;
       
       // Помещаем сформированную структуру в разделяемую память
       UDPSharedData.set(UDPstateRecord);
-  }
+  } // while
 }
 
+//! Внутренний метод, формирующий структуру udp_data_t
 void UDPController::constructUDPdataStructure(udp_data_t &UDPstateRecord, const byte_array &UDPDataPort1, const byte_array &UDPDataPort2) {
 	for(size_t i=0; i<UDPDataPort1.size(); i++) {
 		UDPstateRecord.datagram_port1[i] = UDPDataPort1[i];

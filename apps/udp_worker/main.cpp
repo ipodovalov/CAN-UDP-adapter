@@ -29,7 +29,6 @@ struct globalArgs_t {
 //! Описание допустимых опций командной строки
 static const char *opts_string = "b1:2:t:";
 
-//! Описание допустимых опций командной строки
 static const struct option long_opts[] = {
     { "port1",      required_argument,  NULL,   '1' },
     { "port2",      required_argument,  NULL,   '2' },
@@ -41,6 +40,7 @@ static const struct option long_opts[] = {
     { NULL,         no_argument,        NULL,   0 }
 };
 
+//! Печать страницы помощи
 void print_help() {
   printf("Это страница помощи для работы с программой udp_worker.\n"
          "Программа берёт из разделяемой памяти структуру, полученную\n"
@@ -77,11 +77,13 @@ void sigint_handler(int signal) {
     }
 }
 
+//! Логирование
 void initLogger() {
     ELogger::initLogger();
     ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_INFO) << "udp_worker запущена";
 }
 
+//! Функция main()
 int main(int argc, char *argv[]) {
     int opt = 0;
     int option_index;
@@ -133,10 +135,12 @@ int main(int argc, char *argv[]) {
         opt = getopt_long(argc, argv, opts_string, long_opts, &option_index);
     }
 
+	// Подменяем обработчик сигналов
     signal(SIGINT, sigint_handler);
 
     initLogger();
 
+	// Читаем конфигурационный файл
     INIReader config(globalArgs.configPath);
 
     if (config.parseResult() == 0) {
@@ -148,6 +152,7 @@ int main(int argc, char *argv[]) {
         ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_WARN) << "Ошибка чтения can_udp_converter.conf файла:" << config.parseResult();
     }
 
+	// Процесс в системе должен быть только один
     Daemon::checkInstance(globalArgs.pidFilePath);
 
     uint8_t res;
@@ -155,7 +160,8 @@ int main(int argc, char *argv[]) {
     // Создание экземпляра контроллера
     Controller = new UDPController(globalArgs.udp_port1, globalArgs.udp_port2);
     assert(Controller != NULL);
- 
+
+	// Запуск основного цикла
     Controller->start(globalArgs.timeout);
 
     if (Controller != NULL) {
@@ -163,4 +169,5 @@ int main(int argc, char *argv[]) {
     }
 
     return 0;
-}
+    
+} // main()
