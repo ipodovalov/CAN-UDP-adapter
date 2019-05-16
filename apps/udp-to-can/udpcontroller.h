@@ -20,7 +20,7 @@ public:
     /*!
      * \brief Конструктор класса
      */
-    UDPController();
+    UDPController(uint16_t port1, uint16_t port2);
 
     ~UDPController();
      //! Функция опроса
@@ -34,8 +34,10 @@ public:
 private:
     //! Указатель на экземпляр класса-драйвера МСУ
     EthernetDeviceDriver *device;
+    uint32_t port1, port2;
+    
     //! Экземпляр класса-хранилища (в разделяемой между приложениями памяти)
-    SHMStorage<can_data_t> msuSharedData;
+    SHMStorage<can_data_t> CANSharedData;
 
     std::atomic<bool> isRunning;
 };

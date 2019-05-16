@@ -44,33 +44,7 @@ enum ERROR_CODE : uint8_t {
     E_CONNECT_ERROR                 = 0x1B
 };
 
-typedef struct __attribute__ ((__packed__)) {
-    uint8_t flags;
-    // кол-во секунд с 00:00:00 01-01-2010
-    embtime_t time;
-    // 24 бита (значение XXXX.XXXX >> 3)
-    uint8_t latitude[3];
-    // 24 бита (значение XXXX.XXXX >> 3)
-    uint8_t longitude[3];
-    uint8_t speed;
-    // значене курса в градусах >> 1
-    uint8_t course;
-} gps_data_record_t;
-
-typedef struct __attribute__ ((__packed__)) {
-    size_t  response_len;
-    uint8_t read_result;
-} msu_data_record_t;
-
-typedef struct __attribute__ ((__packed__)) {
-    embtime_t   time;
-    float32_t   left_sensor_raw;
-    float32_t   right_sensor_raw;
-    uint16_t    fuel_weight;
-    int8_t      fuel_temperature;
-    float32_t   fuel_density;
-    uint16_t    fuel_volume;
-} fuel_data_record_t;
+#define BUF_SIZE 1500                        // длина UDP пакета
 
 typedef struct __attribute__ ((__packed__)) {
     embtime_t   time_stamp;
@@ -78,13 +52,10 @@ typedef struct __attribute__ ((__packed__)) {
 	uint16_t    zer_size;
 } can_data_t;
 
-#define BUF_SIZE 1500                        // длина UDP пакета
-
 typedef struct __attribute__ ((__packed__)) {
-    embtime_t  time_stamp ;
-    struct timespec nano_time_stamp ;
-    uint8_t datagram[BUF_SIZE] ;		    // свежий UDP-пакет
-    uint16_t useful_size ;
-} msu_karat_bks_data_t;
+    embtime_t   time_stamp;
+	uint8_t datagram[BUF_SIZE] ;		    // свежий UDP-пакет
+	uint16_t    zer_size;
+} udp_data_t;
 
 #endif // TYPEDEFS_H

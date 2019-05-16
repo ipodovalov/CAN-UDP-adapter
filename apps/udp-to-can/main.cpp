@@ -21,6 +21,7 @@ using namespace std;
 struct globalArgs_t {
     uint16_t                udp_port1;
     uint16_t                udp_port2;
+    int                     timeout;
     std::string             configPath;             // --config
     std::string             pidFilePath;            // --pidfile
 } globalArgs;
@@ -149,22 +150,13 @@ int main(int argc, char *argv[]) {
     uint8_t res;
 
     // Создание экземпляра контроллера
-    Controller = new UDPController();
+    Controller = new UDPController(globalArgs.udp_port1, globalArgs.udp_port2);
     assert(Controller != NULL);
-
-    // Открытие портов
-    res = Controller->openPort();
-
-    if (res != E_OK) {
-        ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_ERROR) << "Не удалось открыть порт " << globalArgs.device_path << "; ERROR:" << res;
-        delete Controller;
-        return 1;
-    }
-  
+ 
     Controller->start(globalArgs.timeout);
 
-    if (pollController != NULL) {
-        delete pollController;
+    if (Controller != NULL) {
+        delete Controller;
     }
 
     return 0;

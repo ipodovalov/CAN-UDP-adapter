@@ -11,13 +11,13 @@
 #include <elogger.h>
 #include <embtime.h>
 
-UDPController::UDPController() :
+UDPController::UDPController(uint16_t port1, uint16_t port2) :
     device(NULL),
-    msuSharedData("usta_diag_data"),
+    CANSharedData("can_data"),
     isRunning(false)
 {
     // Создание экземпляра класса Ethernet интерфейса
-    device = new EthernetDeviceDriver();
+    device = new EthernetDeviceDriver(port1, port2);
     assert(device != NULL);
 }
 
@@ -25,15 +25,12 @@ UDPController::~UDPController() {
     isRunning = false;
 }
 
-ERROR_CODE UDPController::openPort(uint16_t port1, uint16_t port2) {
-    return device->openPort(port1, port2);
-}
-
 void UDPController::start(int timeout) {
   uint8_t res;
-  usta_diagnostic_data_t msuStateRecord;
+  can_data_t Record;
+  can_data_t CANstateRecord;
   byte_array masterData;
-  
+  int read_timeout = 1;
   isRunning = true;
 
   // Чтение запросов от Мастера пока не будет вызван метод stop()
@@ -59,11 +56,12 @@ void UDPController::start(int timeout) {
       ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полезные данные Мастера (" << masterData.size() << "байт ):" << masterData ;
       ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Данные Мастера корректны. Размер:" << masterData.size() << "байт.";
       
-      msuStateRecord = msuSharedData.get();
+      CANstateRecord = CANSharedData.get();
       
-      res = device->sendData(msuStateRecord);
+      res = device->sendData(CANstateRecord);
+      
       if (res != E_OK) {
-          ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_ERROR) << "Не удалось отправить данные Мастеру. Ошибка:" << res;
+          ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_ERROR) << "Не удалось отправить данные по сети. Ошибка:" << res;
       }
   }
 }
