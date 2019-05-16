@@ -1,5 +1,5 @@
-#ifndef UDPCONTROLLER_H
-#define UDPCONTROLLER_H
+#ifndef CANCONTROLLER_H
+#define CANCONTROLLER_H
 
 #include <cstdint>
 #include <string>
@@ -9,19 +9,19 @@
 
 #include <typedefs.h>
 
-#include <ethernetdevicedriver.h>
+#include <candevicedriver.h>
 #include <shmstorage.h>
 
 //! Класс контроллера
-class UDPController
+class CANController
 {
 public:
     /*!
      * \brief Конструктор класса
      */
-    UDPController(uint16_t port1, uint16_t port2);
+    CANController();
 
-    ~UDPController();
+    ~CANController();
      //! Функция опроса
     /*! Опрос выполняется в вызывающем потоке. Функция блокируется до вызова функции stop из другого потока */
     void start(int timeout);
@@ -30,12 +30,12 @@ public:
     void stop() { isRunning = false; }
 
 protected:
-	void constructUDPdataStructure(udp_data_t &UDPstateRecord, const byte_array &UDPDataPort1, const byte_array &UDPDataPort2) ;
+	void constructCANdataStructure(can_data_t &CANstateRecord, const byte_array &CANDataInterface1, const byte_array &CANDataInterface2) ;
 
 private:
-    //! Указатель на экземпляр класса-драйвера Ethernet
-    EthernetDeviceDriver *device;
-    uint32_t port1, port2;
+    //! Указатель на экземпляры класса-драйвера CAN-интерфейса
+    CANDeviceDriver *device1, *device2;
+//    uint32_t port1, port2;
     
     //! Экземпляр класса-хранилища (в разделяемой между приложениями памяти)
     SHMStorage<can_data_t> CANSharedData;
@@ -44,4 +44,4 @@ private:
     std::atomic<bool> isRunning;
 };
 
-#endif // UDPCONTROLLER_H
+#endif // CANCONTROLLER_H

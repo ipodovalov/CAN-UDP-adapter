@@ -16,7 +16,7 @@ fi
 TARGET=$(basename `pwd`)
 mkdir -p build
 cd build
-cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/buildroot.cmake .. 1> /dev/null
+cmake -DCMAKE_TOOLCHAIN_FILE=../../cmake/buildroot.cmake .. 1> /dev/null
 make 2> error.tmp 1> /dev/null
 
 COUNT_STR_ERR=$(wc -l error.tmp)
