@@ -24,8 +24,25 @@ EthernetDeviceDriver::~EthernetDeviceDriver() {
     }
 }
 
-ERROR_CODE EthernetDeviceDriver::getData(byte_array &response, uint32_t read_timeout)
+ERROR_CODE EthernetDeviceDriver::getData(byte_array &UDPDataPort1, byte_array &UDPDataPort2)
 {
+	char temp[BUF_SIZE];
+	long ret;
+	
+	ret = UDPSocket1->receive(temp, BUF_SIZE);
+	if(ret >= 0) {
+	    for (size_t i = 0; i < ret; i++){
+            UDPDataPort1.push_back(temp[i]);
+		}
+	}
+	
+	ret = UDPSocket2->receive(temp, BUF_SIZE);
+	if(ret >= 0) {
+	    for (size_t i = 0; i < ret; i++){
+            UDPDataPort2.push_back(temp[i]);
+		}
+	}
+	
     return E_OK;
 }
 
@@ -36,16 +53,6 @@ ERROR_CODE EthernetDeviceDriver::sendData(const can_data_t &CANData) {
 
     // Добавление данных тела пакета в буфер для отправки
     packet.append(reinterpret_cast<const uint8_t *>(&CANData), sizeof(CANData));
-
-    /*
-    std::cerr << "Writing packet: ";
-
-    for (size_t i = 0; i < packet.size(); i++) {
-        fprintf(stderr, "%.2X ", packet.at(i));
-    }
-
-    std::cerr << std::endl;
-    */
 
 	// Тут определяем в какой порт отправлять данные
 

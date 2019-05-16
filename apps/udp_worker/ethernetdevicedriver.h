@@ -24,10 +24,11 @@ public:
 
     /*!
      * \brief Слушаем порт UDP
-     * \param responsе массив байт, содержащий полученные по сети данные.
+     * \param UDPDataPort1 массив байт полученный c 1 порта
+     * \param UDPDataPort2 массив байт полученный cо 2 порта
      * \return код ошибки
      */
-    ERROR_CODE getData(byte_array &response, uint32_t read_timeout);
+    ERROR_CODE getData(byte_array &UDPDataPort1, byte_array &UDPDataPort2);
 
 protected:
    

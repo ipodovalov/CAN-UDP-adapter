@@ -8,7 +8,6 @@
 #include <atomic>
 
 #include <typedefs.h>
-#include <shmstorage.h>
 
 #include <ethernetdevicedriver.h>
 #include <shmstorage.h>
@@ -30,7 +29,6 @@ public:
     //! Прервать цикл
     void stop() { isRunning = false; }
 
-
 private:
     //! Указатель на экземпляр класса-драйвера МСУ
     EthernetDeviceDriver *device;
@@ -38,6 +36,7 @@ private:
     
     //! Экземпляр класса-хранилища (в разделяемой между приложениями памяти)
     SHMStorage<can_data_t> CANSharedData;
+    SHMStorage<udp_data_t> UDPSharedData;
 
     std::atomic<bool> isRunning;
 };
