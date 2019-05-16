@@ -80,7 +80,7 @@ void sigint_handler(int signal) {
 //! Логирование
 void initLogger() {
     ELogger::initLogger();
-    ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_INFO) << "udp_worker запущена";
+    ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_INFO) << "Программа udp_worker запущена";
 }
 
 //! Функция main()
