@@ -1,4 +1,4 @@
-project(can_to_udp)
+project(can_worker)
 cmake_minimum_required(VERSION 2.8)
 
 if(UNIX)

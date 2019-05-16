@@ -22,8 +22,8 @@ struct globalArgs_t {
     uint16_t                udp_port1;
     uint16_t                udp_port2;
     int                     timeout;
-    std::string             configPath;             // --config
-    std::string             pidFilePath;            // --pidfile
+    std::string             configPath;
+    std::string             pidFilePath;
 } globalArgs;
 
 //! Описание допустимых опций командной строки
@@ -42,7 +42,11 @@ static const struct option long_opts[] = {
 };
 
 void print_help() {
-  printf("Это страница помощи для работы с программой udp_to_can\n"
+  printf("Это страница помощи для работы с программой udp_worker.\n"
+         "Программа берёт из разделяемой памяти структуру, полученную\n"
+         "по интерфейсу CAN, отправляет эту структуру по заданному порту\n"
+         "UDP, кроме того получает по UDP данные и помещает эти данные\n"
+         "также в разделяемую память, для обработки другим процессом\n"
          "Список опций:\n"
          "    -h          --help              отображает то, что вы видите сейчас\n"
          "    -b          --daemonize         запуск в режиме демона\n"
@@ -50,7 +54,7 @@ void print_help() {
          "    -2 port2    --port2 port2       задать номер порта UDP соответствующий CAN2-интерфейсу\n"
          "    -t timeout  --timeout timeout   установить периодичность опроса устройства (в милисекундах)\n"
          "                --config file_path  путь к config файлу (default /etc/can_udp_converter.conf)\n"
-         "                --pidfile file_path установить путь к pid файлу (default /tmp/run/can_udp.pid)\n"
+         "                --pidfile file_path установить путь к pid файлу (default /tmp/run/udp_worker.pid)\n"
          );
 }
 
@@ -75,7 +79,7 @@ void sigint_handler(int signal) {
 
 void initLogger() {
     ELogger::initLogger();
-    ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_INFO) << "udp_to_can запущена";
+    ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_INFO) << "udp_worker запущена";
 }
 
 int main(int argc, char *argv[]) {
@@ -87,7 +91,7 @@ int main(int argc, char *argv[]) {
     globalArgs.udp_port2 = 5454;
     globalArgs.timeout = 50;
     globalArgs.configPath = "/etc/can_udp_converter.conf";
-    globalArgs.pidFilePath = "/tmp/run/can_udp.pid";
+    globalArgs.pidFilePath = "/tmp/run/udp_worker.pid";
 
     // Обработка опций командной строки
     opt = getopt_long(argc, argv, opts_string, long_opts, &option_index);
@@ -136,13 +140,12 @@ int main(int argc, char *argv[]) {
     INIReader config(globalArgs.configPath);
 
     if (config.parseResult() == 0) {
-        // Config file read
-        globalArgs.udp_port1 =           config.getUInt("udp_to_can", "udp_port1", globalArgs.udp_port1);
-        globalArgs.udp_port2 =               config.getUInt("udp_to_can", "udp_port2", globalArgs.udp_port2);
-        globalArgs.timeout =                config.getUInt("udp_to_can", "poll_delay_msec", globalArgs.timeout);
-        globalArgs.pidFilePath =            config.get("udp_to_can", "pidfile", globalArgs.pidFilePath);
+        globalArgs.udp_port1 =           config.getUInt("udp_worker", "udp_port1", globalArgs.udp_port1);
+        globalArgs.udp_port2 =               config.getUInt("udp_worker", "udp_port2", globalArgs.udp_port2);
+        globalArgs.timeout =                config.getUInt("udp_worker", "poll_delay_msec", globalArgs.timeout);
+        globalArgs.pidFilePath =            config.get("udp_worker", "pidfile", globalArgs.pidFilePath);
     } else {
-        ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_WARN) << "Ошибка чтения mpm.conf файла:" << config.parseResult();
+        ELOG(ELogger::INFO_SYSTEM, ELogger::LEVEL_WARN) << "Ошибка чтения can_udp_converter.conf файла:" << config.parseResult();
     }
 
     Daemon::checkInstance(globalArgs.pidFilePath);

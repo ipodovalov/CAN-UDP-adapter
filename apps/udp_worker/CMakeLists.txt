@@ -1,8 +1,8 @@
-project(udp_to_can)
+project(udp_worker)
 cmake_minimum_required(VERSION 2.8)
 
 if(UNIX)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-comment -Wno-unused-variable -Wno-sign-compare -std=gnu++0x -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-write-strings")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-comment -Wno-unused-variable -Wno-sign-compare -std=gnu++0x -Wno-unused-but-set-variable -Wno-misleading-indentation")
 endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

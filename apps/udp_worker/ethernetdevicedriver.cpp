@@ -9,9 +9,9 @@
 EthernetDeviceDriver::EthernetDeviceDriver(uint16_t port1, uint16_t port2) :
     UDPSocket1(NULL), UDPSocket2(NULL)
 {
-    UDPSocket1 = new DatagramSocket(port1, "255.255.255.255", TRUE, TRUE); ;
+    UDPSocket1 = new DatagramSocket(port1, (char*)"255.255.255.255", TRUE, TRUE); ;
     assert(UDPSocket1 != NULL);
-    UDPSocket2 = new DatagramSocket(port2, "255.255.255.255", TRUE, TRUE); ;
+    UDPSocket2 = new DatagramSocket(port2, (char*)"255.255.255.255", TRUE, TRUE); ;
     assert(UDPSocket2 != NULL);
 }
 
