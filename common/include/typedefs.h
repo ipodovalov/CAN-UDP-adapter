@@ -4,6 +4,10 @@
 #include <cstdint>
 #include <string>
 
+#include <net/if.h>
+#include <linux/can.h>
+#include <linux/can/raw.h>
+
 //extern "C" {
 #include <embtime.h>
 //}
@@ -48,8 +52,8 @@ enum ERROR_CODE : uint8_t {
 
 typedef struct __attribute__ ((__packed__)) {
     embtime_t   time_stamp;
-	int16_t     zerkalo[20];
-	uint16_t    zer_size;
+	can_frame   can_1_frame;
+	can_frame   can_2_frame;
 } can_data_t;
 
 typedef struct __attribute__ ((__packed__)) {
