@@ -11,7 +11,7 @@
 #include <getopt.h>
 #include <signal.h>
 #include <elogger.h>
-#include <udpcontroller.h>
+#include <cancontroller.h>
 #include <inireader.h>
 #include <daemon.h>
 

@@ -1,4 +1,4 @@
-#include "udpcontroller.h"
+#include "cancontroller.h"
 
 #include <mqueue.h>
 #include <thread>
@@ -18,9 +18,11 @@ CANController::CANController() :
     UDPSharedData("udp_data"),
     isRunning(false)
 {
-    // Создание экземпляра класса Ethernet интерфейса
-    device = new CANDeviceDriver();
-    assert(device != NULL);
+    // Создание экземпляра класса CAN интерфейса
+    device1 = new CANDeviceDriver();
+    assert(device1 != NULL);
+    device2 = new CANDeviceDriver();
+    assert(device2 != NULL);
 }
 
 CANController::~CANController() {
@@ -28,7 +30,7 @@ CANController::~CANController() {
 }
 
 //! Основной цикл программы
-void UDPController::start(int timeout) {
+void CANController::start(int timeout) {
   uint8_t res;
   can_data_t CANstateRecord;
   udp_data_t UDPstateRecord;

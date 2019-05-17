@@ -6,7 +6,7 @@
 
 #include <elogger.h>
 
-CANDeviceDriver::CANDeviceDriver() :
+CANDeviceDriver::CANDeviceDriver()
 //    UDPSocket1(NULL), UDPSocket2(NULL) // тут будут другие устройства
 {
 //    UDPSocket1 = new DatagramSocket(port1, (char*)"255.255.255.255", TRUE, TRUE); ;
