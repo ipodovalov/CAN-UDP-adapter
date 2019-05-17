@@ -16,6 +16,7 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/libini/build)
 
 aux_source_directory(. SRC_LIST)
 list (APPEND SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/../../common/src/embtime.cpp")
+list (APPEND SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/../../common/src/cansocket.cpp")
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 

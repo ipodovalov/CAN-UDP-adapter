@@ -5,7 +5,7 @@
 #include <string>
 
 #include <typedefs.h>
-#include "cansocket.h"
+#include <cansocket.h>
 
 //! Класс-драйвер для работы с CAN
 class CANDeviceDriver
