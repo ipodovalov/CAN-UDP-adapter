@@ -92,14 +92,7 @@ void CANController::start(int timeout) {
 }
 
 //! Внутренний метод, формирующий структуру can_data_t
-void CANController::constructCANdataStructure(can_data_t &CANstateRecord, const can_frame &CANDataInterface1, const can_frame &CANDataInterface2) {
-//	for(size_t i=0; i<UDPDataPort1.size(); i++) {
-//		UDPstateRecord.datagram_port1[i] = UDPDataPort1[i];
-//	}
-//	UDPstateRecord.datagram_size_port1 = UDPDataPort1.size();
-//
-//	for(size_t i=0; i<UDPDataPort2.size(); i++) {
-//		UDPstateRecord.datagram_port2[i] = UDPDataPort2[i];
-//	}
-//	UDPstateRecord.datagram_size_port2 = UDPDataPort2.size();
+void CANController::constructCANdataStructure(can_data_t &CANstateRecord, const can_frame &CANData1, const can_frame &CANData2) {
+      CANstateRecord.can_1_frame = CANData1;
+      CANstateRecord.can_2_frame = CANData2;
 }

@@ -15,6 +15,10 @@ public:
 
     ~CANDeviceDriver();
 
+    /*!
+     * \brief Открывает нам CAN-интерфейс
+     * \return true - если удалось
+     */
     bool CANOpen();
 
     /*!
