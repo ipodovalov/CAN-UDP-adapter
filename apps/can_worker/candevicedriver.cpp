@@ -8,27 +8,37 @@
 
 #include <cansocket.h>
 
-CANDeviceDriver::CANDeviceDriver() :
-    CANSocket1(NULL), CANSocket2(NULL) 
+CANDeviceDriver::CANDeviceDriver(char* can_interface_name) :
+    CANSocket(NULL)
 {
-    CANSocket1 = new SocketCAN((char*)"can0") ;
-    assert(CANSocket1 != NULL);
-    CANSocket2 = new SocketCAN((char*)"can1") ;
-    assert(CANSocket2 != NULL);
+    CANSocket = new SocketCAN(can_interface_name) ;
+    assert(CANSocket != NULL);
 }
 
 CANDeviceDriver::~CANDeviceDriver() {
-    if (CANSocket1 != NULL) {
-        delete CANSocket1;
-    }
-    if (CANSocket2 != NULL) {
-        delete CANSocket2;
+    if (CANSocket != NULL) {
+        delete CANSocket;
     }
 }
 
-ERROR_CODE CANDeviceDriver::getData(byte_array &CANDataInterface)
+bool CANDeviceDriver::CANOpen() {
+    return CANSocket->CANOpen();
+}
+
+ERROR_CODE CANDeviceDriver::getData(can_frame &CANData)
 {
-	return E_OK;
+    unsigned long id;
+    unsigned char len;
+    unsigned char buf[8];
+    int rez = CANSocket->CANGetFrame(id, len, buf);
+    CANData.can_id = id;
+    CANData.can_dlc = len;
+    memcpy(CANData.data, buf, 8);
+    if( !rez ) {
+        return E_OK;
+    } else {
+        return E_READ_ERROR;
+    }
 }
 
 ERROR_CODE CANDeviceDriver::sendData(const udp_data_t CANData) {

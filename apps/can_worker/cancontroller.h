@@ -30,12 +30,11 @@ public:
     void stop() { isRunning = false; }
 
 protected:
-	void constructCANdataStructure(can_data_t &CANstateRecord, const byte_array &CANDataInterface1, const byte_array &CANDataInterface2) ;
+	void constructCANdataStructure(can_data_t &CANstateRecord, const can_frame &CANData1, const can_frame &CANData2) ;
 
 private:
     //! Указатель на экземпляры класса-драйвера CAN-интерфейса
     CANDeviceDriver *device1, *device2;
-//    uint32_t port1, port2;
     
     //! Экземпляр класса-хранилища (в разделяемой между приложениями памяти)
     SHMStorage<can_data_t> CANSharedData;

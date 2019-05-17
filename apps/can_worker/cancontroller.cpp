@@ -19,9 +19,9 @@ CANController::CANController() :
     isRunning(false)
 {
     // Создание экземпляра класса CAN интерфейса
-    device1 = new CANDeviceDriver();
+    device1 = new CANDeviceDriver((char*)"can0");
     assert(device1 != NULL);
-    device2 = new CANDeviceDriver();
+    device2 = new CANDeviceDriver((char*)"can1");
     assert(device2 != NULL);
 }
 
@@ -34,7 +34,8 @@ void CANController::start(int timeout) {
   uint8_t res;
   can_data_t CANstateRecord;
   udp_data_t UDPstateRecord;
-  byte_array CANDataInterface1, CANDataInterface2;
+  struct can_frame CANData1, CANData2;
+//  byte_array CANDataInterface1, CANDataInterface2;
   isRunning = true;
 
   // Основной цикл программы
@@ -45,6 +46,8 @@ void CANController::start(int timeout) {
    * для обработки другим процессом (udp_worker). 
    * До тех пор пока не будет вызван метод stop().
    */
+  device1->CANOpen();
+  device2->CANOpen();
   while (isRunning) {
       // Задержка между опросами
       usleep(timeout * 1000UL);
@@ -62,25 +65,26 @@ void CANController::start(int timeout) {
       }
       
       // Очистка переменной с данными перед приёмом данных по UDP
-      CANDataInterface1.clear(); CANDataInterface2.clear();
+      memset(&CANData1, 0, sizeof(CANData1));
+      memset(&CANData2, 0, sizeof(CANData2)); 
       
       // Чтение данных с интерфесов CAN
-      res = device1->getData(CANDataInterface1);
+      res = device1->getData(CANData1);
       if (res != E_OK) {
           ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_ERROR) << "Не удалось получить данные с CAN1. Ошибка:" << res;
           continue;
       }
-      res = device2->getData(CANDataInterface2);
+      res = device2->getData(CANData2);
       if (res != E_OK) {
           ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_ERROR) << "Не удалось получить данные с CAN2. Ошибка:" << res;
           continue;
       }
 
-      ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по CAN1 данные (" << CANDataInterface1.size() << "байт ):" << CANDataInterface1 ;
-      ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по CAN2 данные (" << CANDataInterface2.size() << "байт ):" << CANDataInterface2 ;
+      ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по CAN1 данные (" << sizeof(CANData1.data) << "байт ):" << CANData1.data ;
+      ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Полученные по CAN2 данные (" << sizeof(CANData2.data) << "байт ):" << CANData2.data ;
       
       // Формируем структуру can_data_t
-      constructCANdataStructure(CANstateRecord, CANDataInterface1, CANDataInterface2) ;
+      constructCANdataStructure(CANstateRecord, CANData1, CANData2) ;
       
       // Помещаем сформированную структуру в разделяемую память
       CANSharedData.set(CANstateRecord);
@@ -88,7 +92,7 @@ void CANController::start(int timeout) {
 }
 
 //! Внутренний метод, формирующий структуру can_data_t
-void CANController::constructCANdataStructure(can_data_t &CANstateRecord, const byte_array &CANDataInterface1, const byte_array &CANDataInterface2) {
+void CANController::constructCANdataStructure(can_data_t &CANstateRecord, const can_frame &CANDataInterface1, const can_frame &CANDataInterface2) {
 //	for(size_t i=0; i<UDPDataPort1.size(); i++) {
 //		UDPstateRecord.datagram_port1[i] = UDPDataPort1[i];
 //	}

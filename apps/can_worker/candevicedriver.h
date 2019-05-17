@@ -11,9 +11,11 @@
 class CANDeviceDriver
 {
 public:
-    CANDeviceDriver();
+    CANDeviceDriver(char* can_interface_name);
 
     ~CANDeviceDriver();
+
+    bool CANOpen();
 
     /*!
      * \brief Отправка в сеть полученных по UDP данных
@@ -27,12 +29,11 @@ public:
      * \param CANDataInterface массив байт полученный по CAN
      * \return код ошибки
      */
-    ERROR_CODE getData(byte_array &CANDataInterface);
+    ERROR_CODE getData(can_frame &CANData);
   
 private:
     //! Указатель на экземпляр класса для работы с CAN
-    SocketCAN *CANSocket1;
-    SocketCAN *CANSocket2;
+    SocketCAN *CANSocket;
 };
 
 #endif // CANDEVICEDRIVER_H
