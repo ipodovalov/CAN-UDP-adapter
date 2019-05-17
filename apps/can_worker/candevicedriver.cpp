@@ -6,22 +6,24 @@
 
 #include <elogger.h>
 
-CANDeviceDriver::CANDeviceDriver()
-//    UDPSocket1(NULL), UDPSocket2(NULL) // тут будут другие устройства
+#include <cansocket.h>
+
+CANDeviceDriver::CANDeviceDriver() :
+    CANSocket1(NULL), CANSocket2(NULL) 
 {
-//    UDPSocket1 = new DatagramSocket(port1, (char*)"255.255.255.255", TRUE, TRUE); ;
-//    assert(UDPSocket1 != NULL);
-//    UDPSocket2 = new DatagramSocket(port2, (char*)"255.255.255.255", TRUE, TRUE); ;
-//    assert(UDPSocket2 != NULL);
+    CANSocket1 = new SocketCAN((char*)"can0") ;
+    assert(CANSocket1 != NULL);
+    CANSocket2 = new SocketCAN((char*)"can1") ;
+    assert(CANSocket2 != NULL);
 }
 
 CANDeviceDriver::~CANDeviceDriver() {
-//    if (UDPSocket1 != NULL) {
-//        delete UDPSocket1;
-//    }
-//    if (UDPSocket2 != NULL) {
-//        delete UDPSocket2;
-//    }
+    if (CANSocket1 != NULL) {
+        delete CANSocket1;
+    }
+    if (CANSocket2 != NULL) {
+        delete CANSocket2;
+    }
 }
 
 ERROR_CODE CANDeviceDriver::getData(byte_array &CANDataInterface)

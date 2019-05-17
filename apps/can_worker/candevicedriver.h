@@ -5,6 +5,7 @@
 #include <string>
 
 #include <typedefs.h>
+#include "cansocket.h"
 
 //! Класс-драйвер для работы с CAN
 class CANDeviceDriver
@@ -30,8 +31,8 @@ public:
   
 private:
     //! Указатель на экземпляр класса для работы с CAN
-//    DatagramSocket *UDPSocket1;
-//    DatagramSocket *UDPSocket2;
+    SocketCAN *CANSocket1;
+    SocketCAN *CANSocket2;
 };
 
 #endif // CANDEVICEDRIVER_H
