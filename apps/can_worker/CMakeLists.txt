@@ -10,9 +10,11 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../common/include)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/elogger)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/elogger/build)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/elogger/build_gcc)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/libini)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/libini/build)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/libini/build_gcc)
 
 aux_source_directory(. SRC_LIST)
 list (APPEND SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/../../common/src/embtime.cpp")
