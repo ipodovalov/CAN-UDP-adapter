@@ -1,5 +1,7 @@
 #!/bin/bash
-# Cборка программ для платы МПМ
+# Cборка программ для платы МПМ или для обычного Linux
+# ./build.sh (для МПМ)
+# ./build.sh HOST (для HOST-машины с обычным Linux)
 COUNT_STR_ERR=0
 
 . ../../functions
@@ -16,7 +18,12 @@ fi
 TARGET=$(basename `pwd`)
 mkdir -p build
 cd build
-cmake -DCMAKE_TOOLCHAIN_FILE=../../../cmake/buildroot.cmake .. 1> /dev/null
+if [ "$FLAG" != 0 ]
+then
+	cmake -DCMAKE_TOOLCHAIN_FILE=../../cmake/buildroot.cmake .. 1> /dev/null
+else
+	cmake -DCMAKE_TOOLCHAIN_FILE=../../cmake/host.cmake .. 1> /dev/null
+fi
 make 2> error.tmp 1> /dev/null
 
 COUNT_STR_ERR=$(wc -l error.tmp)
@@ -58,7 +65,7 @@ else
 		else
 			echo_failure
 		fi
-
+	else
 		echo отправляем папку с оверлеем \(внутри проекта\)
 		cp ${TARGET%.*} ../../../overlay/usr/sbin/
 		if [ $? -eq 0 ]; then
