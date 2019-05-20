@@ -52,7 +52,7 @@ else
 		fi
 
 		echo отправляем также в папку с оверлеем \(внутри buildroot\)
-		cp ${TARGET%.*} ../../../../buildroot/system/overlay/usr/sbin/
+#		cp ${TARGET%.*} ../../../../buildroot/system/overlay/usr/sbin/
 		if [ $? -eq 0 ]; then
                 	echo_ok
 		else
