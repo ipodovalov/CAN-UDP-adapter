@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kubuntu/CAN-UDP-converter/libs/elogger
+CMAKE_SOURCE_DIR = /home/kubuntu/CAN-UDP-converter/libs/libini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc
+CMAKE_BINARY_DIR = /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,125 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named elogger
+# Target rules for targets named inireader
 
 # Build rule for target.
-elogger: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 elogger
-.PHONY : elogger
+inireader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inireader
+.PHONY : inireader
 
 # fast build rule for target.
-elogger/fast:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/build
-.PHONY : elogger/fast
+inireader/fast:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/build
+.PHONY : inireader/fast
 
-consoleloghandler.o: consoleloghandler.cpp.o
+ini.o: ini.c.o
 
-.PHONY : consoleloghandler.o
-
-# target to build an object file
-consoleloghandler.cpp.o:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/consoleloghandler.cpp.o
-.PHONY : consoleloghandler.cpp.o
-
-consoleloghandler.i: consoleloghandler.cpp.i
-
-.PHONY : consoleloghandler.i
-
-# target to preprocess a source file
-consoleloghandler.cpp.i:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/consoleloghandler.cpp.i
-.PHONY : consoleloghandler.cpp.i
-
-consoleloghandler.s: consoleloghandler.cpp.s
-
-.PHONY : consoleloghandler.s
-
-# target to generate assembly for a file
-consoleloghandler.cpp.s:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/consoleloghandler.cpp.s
-.PHONY : consoleloghandler.cpp.s
-
-elogger.o: elogger.cpp.o
-
-.PHONY : elogger.o
+.PHONY : ini.o
 
 # target to build an object file
-elogger.cpp.o:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/elogger.cpp.o
-.PHONY : elogger.cpp.o
+ini.c.o:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/ini.c.o
+.PHONY : ini.c.o
 
-elogger.i: elogger.cpp.i
+ini.i: ini.c.i
 
-.PHONY : elogger.i
+.PHONY : ini.i
 
 # target to preprocess a source file
-elogger.cpp.i:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/elogger.cpp.i
-.PHONY : elogger.cpp.i
+ini.c.i:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/ini.c.i
+.PHONY : ini.c.i
 
-elogger.s: elogger.cpp.s
+ini.s: ini.c.s
 
-.PHONY : elogger.s
+.PHONY : ini.s
 
 # target to generate assembly for a file
-elogger.cpp.s:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/elogger.cpp.s
-.PHONY : elogger.cpp.s
+ini.c.s:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/ini.c.s
+.PHONY : ini.c.s
 
-fileloghandler.o: fileloghandler.cpp.o
+inireader.o: inireader.cpp.o
 
-.PHONY : fileloghandler.o
+.PHONY : inireader.o
 
 # target to build an object file
-fileloghandler.cpp.o:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/fileloghandler.cpp.o
-.PHONY : fileloghandler.cpp.o
+inireader.cpp.o:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/inireader.cpp.o
+.PHONY : inireader.cpp.o
 
-fileloghandler.i: fileloghandler.cpp.i
+inireader.i: inireader.cpp.i
 
-.PHONY : fileloghandler.i
-
-# target to preprocess a source file
-fileloghandler.cpp.i:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/fileloghandler.cpp.i
-.PHONY : fileloghandler.cpp.i
-
-fileloghandler.s: fileloghandler.cpp.s
-
-.PHONY : fileloghandler.s
-
-# target to generate assembly for a file
-fileloghandler.cpp.s:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/fileloghandler.cpp.s
-.PHONY : fileloghandler.cpp.s
-
-sysloghandler.o: sysloghandler.cpp.o
-
-.PHONY : sysloghandler.o
-
-# target to build an object file
-sysloghandler.cpp.o:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/sysloghandler.cpp.o
-.PHONY : sysloghandler.cpp.o
-
-sysloghandler.i: sysloghandler.cpp.i
-
-.PHONY : sysloghandler.i
+.PHONY : inireader.i
 
 # target to preprocess a source file
-sysloghandler.cpp.i:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/sysloghandler.cpp.i
-.PHONY : sysloghandler.cpp.i
+inireader.cpp.i:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/inireader.cpp.i
+.PHONY : inireader.cpp.i
 
-sysloghandler.s: sysloghandler.cpp.s
+inireader.s: inireader.cpp.s
 
-.PHONY : sysloghandler.s
+.PHONY : inireader.s
 
 # target to generate assembly for a file
-sysloghandler.cpp.s:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/sysloghandler.cpp.s
-.PHONY : sysloghandler.cpp.s
+inireader.cpp.s:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/inireader.cpp.s
+.PHONY : inireader.cpp.s
 
 # Help Target
 help:
@@ -238,20 +184,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... elogger"
+	@echo "... inireader"
 	@echo "... edit_cache"
-	@echo "... consoleloghandler.o"
-	@echo "... consoleloghandler.i"
-	@echo "... consoleloghandler.s"
-	@echo "... elogger.o"
-	@echo "... elogger.i"
-	@echo "... elogger.s"
-	@echo "... fileloghandler.o"
-	@echo "... fileloghandler.i"
-	@echo "... fileloghandler.s"
-	@echo "... sysloghandler.o"
-	@echo "... sysloghandler.i"
-	@echo "... sysloghandler.s"
+	@echo "... ini.o"
+	@echo "... ini.i"
+	@echo "... ini.s"
+	@echo "... inireader.o"
+	@echo "... inireader.i"
+	@echo "... inireader.s"
 .PHONY : help
 
 

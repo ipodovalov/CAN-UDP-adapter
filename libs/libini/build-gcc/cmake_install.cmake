@@ -1,4 +1,4 @@
-# Install script for directory: /home/kubuntu/CAN-UDP-converter/libs/elogger
+# Install script for directory: /home/kubuntu/CAN-UDP-converter/libs/libini
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

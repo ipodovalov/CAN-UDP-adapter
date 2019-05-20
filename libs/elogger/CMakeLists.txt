@@ -8,7 +8,7 @@ endif()
 INCLUDE_DIRECTORIES(.)
 INCLUDE_DIRECTORIES(../../common/include)
 
-ADD_LIBRARY( elogger SHARED 
+ADD_LIBRARY( elogger SHARED
 elogger.cpp
 elogger.h
 iloghandler.h

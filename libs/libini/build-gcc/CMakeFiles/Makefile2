@@ -59,45 +59,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kubuntu/CAN-UDP-converter/libs/elogger
+CMAKE_SOURCE_DIR = /home/kubuntu/CAN-UDP-converter/libs/libini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc
+CMAKE_BINARY_DIR = /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc
 
 #=============================================================================
-# Target rules for target CMakeFiles/elogger.dir
+# Target rules for target CMakeFiles/inireader.dir
 
 # All Build rule for target.
-CMakeFiles/elogger.dir/all:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/depend
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles --progress-num=1,2,3,4,5 "Built target elogger"
-.PHONY : CMakeFiles/elogger.dir/all
+CMakeFiles/inireader.dir/all:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/depend
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles --progress-num=1,2,3 "Built target inireader"
+.PHONY : CMakeFiles/inireader.dir/all
 
 # Include target in all.
-all: CMakeFiles/elogger.dir/all
+all: CMakeFiles/inireader.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/elogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/elogger.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/elogger/build-gcc/CMakeFiles 0
-.PHONY : CMakeFiles/elogger.dir/rule
+CMakeFiles/inireader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/inireader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles 0
+.PHONY : CMakeFiles/inireader.dir/rule
 
 # Convenience name for target.
-elogger: CMakeFiles/elogger.dir/rule
+inireader: CMakeFiles/inireader.dir/rule
 
-.PHONY : elogger
-
-# clean rule for target.
-CMakeFiles/elogger.dir/clean:
-	$(MAKE) -f CMakeFiles/elogger.dir/build.make CMakeFiles/elogger.dir/clean
-.PHONY : CMakeFiles/elogger.dir/clean
+.PHONY : inireader
 
 # clean rule for target.
-clean: CMakeFiles/elogger.dir/clean
+CMakeFiles/inireader.dir/clean:
+	$(MAKE) -f CMakeFiles/inireader.dir/build.make CMakeFiles/inireader.dir/clean
+.PHONY : CMakeFiles/inireader.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/inireader.dir/clean
 
 .PHONY : clean
 

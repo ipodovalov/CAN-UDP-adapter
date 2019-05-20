@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -26,17 +26,17 @@ sstream
 cstdint
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.cpp
+/home/kubuntu/CAN-UDP-converter/libs/elogger/consoleloghandler.cpp
 consoleloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/consoleloghandler.h
 cstdio
 -
 iostream
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/consoleloghandler.h
 iloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/iloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/iloghandler.h
 mutex
 -
 string
@@ -50,15 +50,15 @@ sys/time.h
 defines.h
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.cpp
+/home/kubuntu/CAN-UDP-converter/libs/elogger/elogger.cpp
 elogger.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/elogger.h
 iloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/iloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/iloghandler.h
 consoleloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/consoleloghandler.h
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/elogger.h
 string
 -
 unordered_map
@@ -76,17 +76,17 @@ sstream
 cstdint
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.cpp
+/home/kubuntu/CAN-UDP-converter/libs/elogger/fileloghandler.cpp
 fileloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/fileloghandler.h
 cstdio
 -
 iostream
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/fileloghandler.h
 iloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/iloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/iloghandler.h
 mutex
 -
 unordered_map
@@ -100,7 +100,7 @@ sys/time.h
 defines.h
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/iloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/iloghandler.h
 string
 -
 unordered_map
@@ -108,13 +108,13 @@ unordered_map
 elogger.h
 -
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.cpp
+/home/kubuntu/CAN-UDP-converter/libs/elogger/sysloghandler.cpp
 sysloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/sysloghandler.h
 
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/sysloghandler.h
 iloghandler.h
-/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/iloghandler.h
+/home/kubuntu/CAN-UDP-converter/libs/elogger/iloghandler.h
 mutex
 -
 syslog.h

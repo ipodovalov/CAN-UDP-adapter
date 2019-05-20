@@ -9,7 +9,7 @@ SET(CMAKE_SYSTEM_VERSION 1)
 SET(CMAKE_C_COMPILER /usr/bin/gcc)
 SET(CMAKE_CXX_COMPILER /usr/bin/g++)
 
-# where is the target environment 
+# where is the target environment
 #SET(CMAKE_FIND_ROOT_PATH  /home/user/sdk/buildroot/output/target/)
 
 # search for programs in the build host directories
