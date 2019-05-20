@@ -1,7 +1,7 @@
 #!/bin/bash
 # Cборка программ для платы МПМ или для обычного Linux
 # ./build.sh (для МПМ)
-# ./build.sh HOST (для HOST-машины)
+# ./build.sh HOST (для HOST-машины c обычным Linux)
 COUNT_STR_ERR=0
 
 . ../../functions
