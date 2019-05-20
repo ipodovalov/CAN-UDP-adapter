@@ -52,8 +52,8 @@ enum ERROR_CODE : uint8_t {
 
 typedef struct __attribute__ ((__packed__)) {
     embtime_t   time_stamp;
-	can_frame   can_1_frame;
-	can_frame   can_2_frame;
+	can_frame   can_1_frame;                // свежий CAN-фрейм (1 интерфейс)
+	can_frame   can_2_frame;                // свежий CAN-фрейм (2 интерфейс) 
 } can_data_t;
 
 typedef struct __attribute__ ((__packed__)) {

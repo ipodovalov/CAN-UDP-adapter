@@ -68,7 +68,7 @@ bool SocketCAN::CANOpen() {
 }
 
 //*****************************************************************************
-bool SocketCAN::CANSendFrame(unsigned long id, unsigned char len, const unsigned char *buf, bool wait_sent) {
+bool SocketCAN::CANSendFrame(unsigned long id, unsigned char len, const unsigned char *buf) {
    struct can_frame frame_wr;
 
    frame_wr.can_id  = id | CAN_EFF_FLAG;

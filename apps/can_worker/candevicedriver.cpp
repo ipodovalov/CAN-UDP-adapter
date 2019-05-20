@@ -41,26 +41,43 @@ ERROR_CODE CANDeviceDriver::getData(can_frame &CANData)
     }
 }
 
-ERROR_CODE CANDeviceDriver::sendData(const udp_data_t CANData) {
-//    byte_array packet;      // Байтовый буфер данных для отправки по CAN
-/*    
-    ssize_t bytesWritten;
-
+ERROR_CODE CANDeviceDriver::sendData(const udp_data_t UDPData, int interface_num) {
+    byte_array packet;      // Байтовый буфер данных для отправки по CAN
+    int i = 0; bool rez = false;
+    unsigned long id = 0x42;
+    unsigned char len = 2;
+    unsigned char buf[8] ;
     // Добавление данных тела пакета в буфер для отправки
-    packet.append(reinterpret_cast<const uint8_t *>(&CANData), sizeof(CANData));
-
-	//! TODO написать блок, где разбираем полученные по CAN данные
-	//! и определяем в какой порт отправлять данные по UDP
-
-    // Отправка сформированного буфера в нужный UDP порт 
-    bytesWritten = UDPSocket1->send((char*)packet.c_str(), packet.size());
-    bytesWritten = UDPSocket2->send((char*)packet.c_str(), packet.size());
-	
-    if ((bytesWritten >= 0) && (bytesWritten == packet.size())) {
+    switch(interface_num) {
+        case 1:
+            // Отправка буфера в нужный CAN-интерфейс
+            id = 0x123;
+            do {
+                memcpy(buf, UDPData.datagram_port2+i, 8);
+                rez = CANSocket->CANSendFrame(id, len, buf);
+                i+=8;
+            } while(i<BUF_SIZE);
+            packet.append(reinterpret_cast<const uint8_t *>(&UDPData.datagram_port1), UDPData.datagram_size_port1);
+            ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Отправленные по CAN1 данные (" << packet.size() << "байт ):" << packet ;
+            break;
+        case 2:
+            // Отправка буфера в нужный CAN-интерфейс
+            id = 0x321;
+            do {
+                memcpy(buf, UDPData.datagram_port2+i, 8);
+                rez = CANSocket->CANSendFrame(id, len, buf);
+                i+=8;
+            } while(i<BUF_SIZE);
+            packet.append(reinterpret_cast<const uint8_t *>(&UDPData.datagram_port2), UDPData.datagram_size_port2);
+            ELOG(ELogger::INFO_DEVICE, ELogger::LEVEL_TRACE) << "Отправленные по CAN2 данные (" << packet.size() << "байт ):" << packet ;
+            break;
+        default:
+            break;
+    }
+       
+    if(!rez) {
         return E_OK;
     } else {
         return E_WRITE_ERROR;
     }
-* */
-	return E_OK;
 }

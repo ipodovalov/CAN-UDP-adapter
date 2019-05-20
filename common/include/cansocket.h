@@ -12,7 +12,7 @@ class SocketCAN
 public:
     SocketCAN(char* CANport=NULL);
     
-    bool CANSendFrame(unsigned long id, unsigned char len, const unsigned char *buf, bool wait_sent);
+    bool CANSendFrame(unsigned long id, unsigned char len, const unsigned char *buf);
     bool CANOpen();
     bool CANGetFrame(unsigned long &id, unsigned char &len, unsigned char *buf);
 

@@ -83,7 +83,7 @@ int main(int argc, char *argv[]) {
     int option_index;
 
     // Задание значений опций по умолчанию
-    globalArgs.timeout = 50;
+    globalArgs.timeout = 500;
     globalArgs.configPath = "/etc/can_udp_converter.conf";
     globalArgs.pidFilePath = "/tmp/run/can_worker.pid";
 

@@ -91,7 +91,7 @@ int main(int argc, char *argv[]) {
     // Задание значений опций по умолчанию
     globalArgs.udp_port1 = 5555;
     globalArgs.udp_port2 = 5454;
-    globalArgs.timeout = 50;
+    globalArgs.timeout = 500;
     globalArgs.configPath = "/etc/can_udp_converter.conf";
     globalArgs.pidFilePath = "/tmp/run/udp_worker.pid";
 

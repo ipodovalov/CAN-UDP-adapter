@@ -26,7 +26,7 @@ public:
      * \param UDPData текущие данные для отправки
      * \return код ошибки
      */
-    ERROR_CODE sendData(const udp_data_t UDPData);
+    ERROR_CODE sendData(const udp_data_t UDPData, int interface_num);
 
     /*!
      * \brief Слушаем интерфейс CAN
