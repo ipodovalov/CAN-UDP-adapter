@@ -44,7 +44,7 @@ can_worker - получает и отправляет данные по CAN;
 Сборку для реального Embedded устройства на базе процессора
 Texas Instruments AM-335 (ARM Cortex-A8) (если установлен необходимый
 toolchain) осуществлять командой:
-<b>./build_embedded.sh<br></b>
+<b><br>./build_embedded.sh<br></b>
 
 Сборку для host-машины командой:
-<b>./build_host.sh<br></b>
+<b><br>./build_host.sh<br></b>
