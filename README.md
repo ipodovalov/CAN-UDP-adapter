@@ -39,7 +39,7 @@ can_worker - получает и отправляет данные по CAN;
 AM-335 (ARM Cortex-A8) осуществлять командой:<br>
 ./build_embedded.sh<br>
 </b>
-
+<br>
 <b>
 Сборку для host-машины командой:<br>
 ./build_host.sh
