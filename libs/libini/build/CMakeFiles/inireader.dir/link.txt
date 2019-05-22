@@ -1,2 +1,0 @@
-/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-ar qc libinireader.a  CMakeFiles/inireader.dir/inireader.cpp.o CMakeFiles/inireader.dir/ini.c.o
-/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-ranlib libinireader.a

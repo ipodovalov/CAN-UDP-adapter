@@ -46,8 +46,8 @@ void CANController::start(int timeout) {
    * для обработки другим процессом (udp_worker). 
    * До тех пор пока не будет вызван метод stop().
    */
-  device1->CANOpen();
-  device2->CANOpen();
+  if(!device1->CANOpen() && !device2->CANOpen())
+    isRunning = false;
   while (isRunning) {
       // Задержка между опросами
       usleep(timeout * 1000UL);

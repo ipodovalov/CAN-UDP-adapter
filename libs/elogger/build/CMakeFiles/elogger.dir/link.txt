@@ -1,1 +1,0 @@
-/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  -fPIC  -Wall -std=gnu++0x  -shared -Wl,-soname,libelogger.so -o libelogger.so CMakeFiles/elogger.dir/elogger.cpp.o CMakeFiles/elogger.dir/consoleloghandler.cpp.o CMakeFiles/elogger.dir/fileloghandler.cpp.o CMakeFiles/elogger.dir/sysloghandler.cpp.o 
