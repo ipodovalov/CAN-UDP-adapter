@@ -38,8 +38,10 @@ can_worker - получает и отправляет данные по CAN;
 AM-335 (ARM Cortex-A8) осуществлять командой:
 ./build_embedded.sh
 
+<b>
 Сборку для host-машины командой:
 ./build_host.sh
+</b>
 
 Исполняемые файлы будут лежать в каталоге overlay/usr/sbin/
 Также задействовал две библиотеки: libelogger.so, libini.so
