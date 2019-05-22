@@ -42,9 +42,8 @@ AM-335 (ARM Cortex-A8) осуществлять командой:<br>
 <br>
 <b>
 Сборку для host-машины командой:<br>
-./build_host.sh
+./build_host.sh<br>
 </b>
-<br>
 
 Исполняемые файлы будут лежать в каталоге overlay/usr/sbin/
 Также задействовал две библиотеки: libelogger.so, libini.so
