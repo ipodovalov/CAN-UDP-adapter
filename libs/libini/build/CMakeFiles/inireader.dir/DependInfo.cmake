@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/user/sdk/mpm_soft/libs/libini/ini.c" "/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/inireader.dir/ini.c.o"
+  "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.c" "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/inireader.dir/ini.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../../../common/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/sdk/mpm_soft/libs/libini/inireader.cpp" "/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/inireader.dir/inireader.cpp.o"
+  "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.cpp" "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/inireader.dir/inireader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -7,11 +7,11 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/user/sdk/mpm_soft/libs/libini/. -I/home/user/sdk/mpm_soft/libs/libini/../../common/include 
+C_INCLUDES = -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/. -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/../../common/include 
 
 CXX_FLAGS =  -Wall -std=gnu++0x  
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/user/sdk/mpm_soft/libs/libini/. -I/home/user/sdk/mpm_soft/libs/libini/../../common/include 
+CXX_INCLUDES = -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/. -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/../../common/include 
 

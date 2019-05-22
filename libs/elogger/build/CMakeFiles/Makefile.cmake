@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/user/sdk/mpm_soft/cmake/buildroot.cmake"
+  "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/cmake/buildroot.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"

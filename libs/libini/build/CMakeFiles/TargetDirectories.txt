@@ -1,3 +1,3 @@
-/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/edit_cache.dir
-/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/rebuild_cache.dir
-/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/inireader.dir
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/edit_cache.dir
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/rebuild_cache.dir
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/inireader.dir

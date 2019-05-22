@@ -1,10 +1,14 @@
 #!/bin/bash
 
 cd libs/elogger/build-gcc/
+rm -r *
+rm -r ../build/*
 cmake ..
 make
 
 cd ../../libini/build-gcc/
+rm -r *
+rm -r ../build/*
 cmake ..
 make
 

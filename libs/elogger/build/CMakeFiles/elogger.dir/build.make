@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/sdk/mpm_soft/libs/elogger
+CMAKE_SOURCE_DIR = /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/sdk/mpm_soft/libs/elogger/build
+CMAKE_BINARY_DIR = /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/elogger.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/elogger.dir/flags.make
 
 CMakeFiles/elogger.dir/elogger.cpp.o: CMakeFiles/elogger.dir/flags.make
 CMakeFiles/elogger.dir/elogger.cpp.o: ../elogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/elogger.dir/elogger.cpp.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/elogger.cpp.o -c /home/user/sdk/mpm_soft/libs/elogger/elogger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/elogger.dir/elogger.cpp.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/elogger.cpp.o -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.cpp
 
 CMakeFiles/elogger.dir/elogger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/elogger.dir/elogger.cpp.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/libs/elogger/elogger.cpp > CMakeFiles/elogger.dir/elogger.cpp.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.cpp > CMakeFiles/elogger.dir/elogger.cpp.i
 
 CMakeFiles/elogger.dir/elogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/elogger.dir/elogger.cpp.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/libs/elogger/elogger.cpp -o CMakeFiles/elogger.dir/elogger.cpp.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/elogger.cpp -o CMakeFiles/elogger.dir/elogger.cpp.s
 
 CMakeFiles/elogger.dir/elogger.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/elogger.dir/elogger.cpp.o.provides.build: CMakeFiles/elogger.dir/elog
 
 CMakeFiles/elogger.dir/consoleloghandler.cpp.o: CMakeFiles/elogger.dir/flags.make
 CMakeFiles/elogger.dir/consoleloghandler.cpp.o: ../consoleloghandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/elogger.dir/consoleloghandler.cpp.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/consoleloghandler.cpp.o -c /home/user/sdk/mpm_soft/libs/elogger/consoleloghandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/elogger.dir/consoleloghandler.cpp.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/consoleloghandler.cpp.o -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.cpp
 
 CMakeFiles/elogger.dir/consoleloghandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/elogger.dir/consoleloghandler.cpp.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/libs/elogger/consoleloghandler.cpp > CMakeFiles/elogger.dir/consoleloghandler.cpp.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.cpp > CMakeFiles/elogger.dir/consoleloghandler.cpp.i
 
 CMakeFiles/elogger.dir/consoleloghandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/elogger.dir/consoleloghandler.cpp.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/libs/elogger/consoleloghandler.cpp -o CMakeFiles/elogger.dir/consoleloghandler.cpp.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/consoleloghandler.cpp -o CMakeFiles/elogger.dir/consoleloghandler.cpp.s
 
 CMakeFiles/elogger.dir/consoleloghandler.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/elogger.dir/consoleloghandler.cpp.o.provides.build: CMakeFiles/elogge
 
 CMakeFiles/elogger.dir/fileloghandler.cpp.o: CMakeFiles/elogger.dir/flags.make
 CMakeFiles/elogger.dir/fileloghandler.cpp.o: ../fileloghandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/elogger.dir/fileloghandler.cpp.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/fileloghandler.cpp.o -c /home/user/sdk/mpm_soft/libs/elogger/fileloghandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/elogger.dir/fileloghandler.cpp.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/fileloghandler.cpp.o -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.cpp
 
 CMakeFiles/elogger.dir/fileloghandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/elogger.dir/fileloghandler.cpp.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/libs/elogger/fileloghandler.cpp > CMakeFiles/elogger.dir/fileloghandler.cpp.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.cpp > CMakeFiles/elogger.dir/fileloghandler.cpp.i
 
 CMakeFiles/elogger.dir/fileloghandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/elogger.dir/fileloghandler.cpp.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/libs/elogger/fileloghandler.cpp -o CMakeFiles/elogger.dir/fileloghandler.cpp.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/fileloghandler.cpp -o CMakeFiles/elogger.dir/fileloghandler.cpp.s
 
 CMakeFiles/elogger.dir/fileloghandler.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/elogger.dir/fileloghandler.cpp.o.provides.build: CMakeFiles/elogger.d
 
 CMakeFiles/elogger.dir/sysloghandler.cpp.o: CMakeFiles/elogger.dir/flags.make
 CMakeFiles/elogger.dir/sysloghandler.cpp.o: ../sysloghandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/elogger.dir/sysloghandler.cpp.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/sysloghandler.cpp.o -c /home/user/sdk/mpm_soft/libs/elogger/sysloghandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/elogger.dir/sysloghandler.cpp.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/elogger.dir/sysloghandler.cpp.o -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.cpp
 
 CMakeFiles/elogger.dir/sysloghandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/elogger.dir/sysloghandler.cpp.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/libs/elogger/sysloghandler.cpp > CMakeFiles/elogger.dir/sysloghandler.cpp.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.cpp > CMakeFiles/elogger.dir/sysloghandler.cpp.i
 
 CMakeFiles/elogger.dir/sysloghandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/elogger.dir/sysloghandler.cpp.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/libs/elogger/sysloghandler.cpp -o CMakeFiles/elogger.dir/sysloghandler.cpp.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/sysloghandler.cpp -o CMakeFiles/elogger.dir/sysloghandler.cpp.s
 
 CMakeFiles/elogger.dir/sysloghandler.cpp.o.requires:
 
@@ -169,7 +169,7 @@ libelogger.so: CMakeFiles/elogger.dir/fileloghandler.cpp.o
 libelogger.so: CMakeFiles/elogger.dir/sysloghandler.cpp.o
 libelogger.so: CMakeFiles/elogger.dir/build.make
 libelogger.so: CMakeFiles/elogger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libelogger.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libelogger.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/elogger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +189,6 @@ CMakeFiles/elogger.dir/clean:
 .PHONY : CMakeFiles/elogger.dir/clean
 
 CMakeFiles/elogger.dir/depend:
-	cd /home/user/sdk/mpm_soft/libs/elogger/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/sdk/mpm_soft/libs/elogger /home/user/sdk/mpm_soft/libs/elogger /home/user/sdk/mpm_soft/libs/elogger/build /home/user/sdk/mpm_soft/libs/elogger/build /home/user/sdk/mpm_soft/libs/elogger/build/CMakeFiles/elogger.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/CMakeFiles/elogger.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/elogger.dir/depend
 

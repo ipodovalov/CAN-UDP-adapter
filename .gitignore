@@ -52,3 +52,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+libs/libini/build/*
+libs/libini/build-gcc/*
+libs/elogger/build/*
+libs/elogger/build-gcc/*

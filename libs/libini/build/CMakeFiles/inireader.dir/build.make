@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/sdk/mpm_soft/libs/libini
+CMAKE_SOURCE_DIR = /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/sdk/mpm_soft/libs/libini/build
+CMAKE_BINARY_DIR = /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/inireader.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/inireader.dir/flags.make
 
 CMakeFiles/inireader.dir/inireader.cpp.o: CMakeFiles/inireader.dir/flags.make
 CMakeFiles/inireader.dir/inireader.cpp.o: ../inireader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/inireader.dir/inireader.cpp.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/inireader.dir/inireader.cpp.o -c /home/user/sdk/mpm_soft/libs/libini/inireader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/inireader.dir/inireader.cpp.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/inireader.dir/inireader.cpp.o -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.cpp
 
 CMakeFiles/inireader.dir/inireader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/inireader.dir/inireader.cpp.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/libs/libini/inireader.cpp > CMakeFiles/inireader.dir/inireader.cpp.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.cpp > CMakeFiles/inireader.dir/inireader.cpp.i
 
 CMakeFiles/inireader.dir/inireader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/inireader.dir/inireader.cpp.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/libs/libini/inireader.cpp -o CMakeFiles/inireader.dir/inireader.cpp.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.cpp -o CMakeFiles/inireader.dir/inireader.cpp.s
 
 CMakeFiles/inireader.dir/inireader.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/inireader.dir/inireader.cpp.o.provides.build: CMakeFiles/inireader.di
 
 CMakeFiles/inireader.dir/ini.c.o: CMakeFiles/inireader.dir/flags.make
 CMakeFiles/inireader.dir/ini.c.o: ../ini.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/inireader.dir/ini.c.o"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/inireader.dir/ini.c.o   -c /home/user/sdk/mpm_soft/libs/libini/ini.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/inireader.dir/ini.c.o"
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/inireader.dir/ini.c.o   -c /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.c
 
 CMakeFiles/inireader.dir/ini.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/inireader.dir/ini.c.i"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/sdk/mpm_soft/libs/libini/ini.c > CMakeFiles/inireader.dir/ini.c.i
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.c > CMakeFiles/inireader.dir/ini.c.i
 
 CMakeFiles/inireader.dir/ini.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/inireader.dir/ini.c.s"
-	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/sdk/mpm_soft/libs/libini/ini.c -o CMakeFiles/inireader.dir/ini.c.s
+	/home/user/sdk/buildroot/output/host/opt/ext-toolchain/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.c -o CMakeFiles/inireader.dir/ini.c.s
 
 CMakeFiles/inireader.dir/ini.c.o.requires:
 
@@ -117,7 +117,7 @@ libinireader.a: CMakeFiles/inireader.dir/inireader.cpp.o
 libinireader.a: CMakeFiles/inireader.dir/ini.c.o
 libinireader.a: CMakeFiles/inireader.dir/build.make
 libinireader.a: CMakeFiles/inireader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libinireader.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libinireader.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/inireader.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/inireader.dir/link.txt --verbose=$(VERBOSE)
 
@@ -136,6 +136,6 @@ CMakeFiles/inireader.dir/clean:
 .PHONY : CMakeFiles/inireader.dir/clean
 
 CMakeFiles/inireader.dir/depend:
-	cd /home/user/sdk/mpm_soft/libs/libini/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/sdk/mpm_soft/libs/libini /home/user/sdk/mpm_soft/libs/libini /home/user/sdk/mpm_soft/libs/libini/build /home/user/sdk/mpm_soft/libs/libini/build /home/user/sdk/mpm_soft/libs/libini/build/CMakeFiles/inireader.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/build/CMakeFiles/inireader.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/inireader.dir/depend
 

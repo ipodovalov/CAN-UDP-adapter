@@ -1,4 +1,4 @@
-# Install script for directory: /home/user/sdk/mpm_soft/libs/elogger
+# Install script for directory: /home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/sdk/mpm_soft/libs/elogger/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/user/sdk/mpm_soft/libs/libini/ini.h
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.h
 stdio.h
 -
 
-/home/user/sdk/mpm_soft/libs/libini/inireader.cpp
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.cpp
 algorithm
 -
 cctype
@@ -18,11 +18,11 @@ cctype
 cstdlib
 -
 ini.h
-/home/user/sdk/mpm_soft/libs/libini/ini.h
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/ini.h
 inireader.h
-/home/user/sdk/mpm_soft/libs/libini/inireader.h
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.h
 
-/home/user/sdk/mpm_soft/libs/libini/inireader.h
+/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/libini/inireader.h
 map
 -
 string

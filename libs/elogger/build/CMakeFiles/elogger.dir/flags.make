@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -std=gnu++0x -fPIC
 
 CXX_DEFINES = -Delogger_EXPORTS
 
-CXX_INCLUDES = -I/home/user/sdk/mpm_soft/libs/elogger/. -I/home/user/sdk/mpm_soft/libs/elogger/../../common/include 
+CXX_INCLUDES = -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/. -I/home/user/sdk/mpm_soft/apps/CAN-UDP-converter/libs/elogger/../../common/include 
 

@@ -1,3 +1,0 @@
-/home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles/rebuild_cache.dir
-/home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles/inireader.dir
-/home/kubuntu/CAN-UDP-converter/libs/libini/build-gcc/CMakeFiles/edit_cache.dir
